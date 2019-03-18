@@ -1,0 +1,163 @@
+html {
+    height: 100.1%;
+}
+
+body {
+    display: grid;
+    width: auto;
+    height: auto;
+    
+    margin: 50px;
+    padding: 20px;
+}
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(backgroundNotes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -9999;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+
+    font-family: 'Lobster', sans-serif;
+    font-size: 3.5vw;
+    text-decoration: underline;
+
+}
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+picture img {
+    width: 70vw;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.dropdowns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px;
+    padding-bottom: 30px;
+}
+
+.dropbtn {
+    background-color: saddlebrown;
+    color: black;
+    padding: 16px;
+    font-size: 1.8vw;
+    font-family: 'Lobster', sans-serif;
+    border: none;
+    border-radius: 4vw;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.dropbtn:focus {
+	outline: none;
+}  
+
+.dropdown {
+    position: relative;
+    display: grid;
+    margin: 2px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cd853f;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    font-size: 1.6vw;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: grid;
+    justify-content: center;
+}
+  
+.dropdown-content a:hover {
+    background-color:  #8b5a2b
+}
+.dropdown-content a:hover.radius {
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+} 
+.dropdown:hover .dropdown-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 2 / 3;
+    width: 100%;
+
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+}
+  
+.dropdown:hover .dropbtn {
+    color: beige;
+    background-color: #cd853f;
+    font-style: italic;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*drop1*/
+#aufbau, #ton, #stimm, #modelle ,#me{
+    display: none; 
+}
+
+#drop1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+summary:focus {
+	outline: none;
+}
+
+/* BUTTON TO THE TOP */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
