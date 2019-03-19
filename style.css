@@ -7,8 +7,10 @@ body {
     width: auto;
     height: auto;
     
-    margin: 50px;
+    margin: 30px 30px 30px 30px;
     padding: 20px;
+    border-top: 2px solid saddlebrown;
+    border-bottom: 2px solid saddlebrown;
 }
 #background {
     position: fixed;
@@ -99,7 +101,7 @@ picture img {
 }
   
 .dropdown-content a:hover {
-    background-color:  #8b5a2b
+    background-color:  #8b5a2b;
 }
 .dropdown-content a:hover.radius {
     border-bottom-left-radius: 4vw;
@@ -124,23 +126,6 @@ picture img {
     border-bottom-right-radius: 0;
 }
 
-/*drop1*/
-#aufbau, #ton, #stimm, #modelle ,#me{
-    display: none; 
-}
-
-#drop1 {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-summary:focus {
-	outline: none;
-}
-
 /* BUTTON TO THE TOP */
 #myBtn {
     display: none; /* Hidden by default */
@@ -150,14 +135,80 @@ summary:focus {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
-    color: white; /* Text color */
+    background-color: #3F250B; /* Set a background color */
+    color: beige; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
-  }
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+}
   
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
+#myBtn:hover {
+    background-color: beige; /* Add a dark-grey background on hover */
+    color: #3F250B;
+    border: 1px solid #3F250B;
+    
+}
+
+/*drop1*/
+#aufbau, #ton, #stimm, #modelle ,#me{
+    display: none; 
+}
+
+#drop1 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+}
+
+details {
+    padding: 0px 7vw;
+    opacity: 0.9;
+
+}
+
+details p {
+    margin: 0px;
+    padding: 20px;
+
+    text-align: justify;
+    background-color: #cd853f;
+
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.5px;
+
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+details[open] summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+summary {
+    display: flex;
+    justify-content: center;
+    
+    background-color: saddlebrown;
+    border-radius: 2vw;
+
+    font-family: 'Lobster', sans-serif;
+    font-size: 2vw;
+
+    margin-top: 10px;
+    padding: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+
+}
+
+summary:focus {
+	outline: none;
+}
+
