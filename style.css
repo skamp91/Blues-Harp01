@@ -90,7 +90,7 @@ picture img {
     opacity: 0.9;
     cursor: pointer;
 
-    border-top-right-radius: 4vw;  
+    border-top-right-radius: 2vw;  
 }
 .dropbtn:focus {
 	outline: none;
@@ -130,7 +130,7 @@ picture img {
     width: auto;
 }
 .dropdown-content a:hover.radius {
-    border-bottom-left-radius: 4vw;
+    border-bottom-left-radius: 2vw;
 } 
 .dropdown:hover .dropdown-content {
     display: grid;
@@ -138,7 +138,7 @@ picture img {
     grid-row: 2 / 3;
     width: 100%;
 
-    border-bottom-left-radius: 4vw;
+    border-bottom-left-radius: 2vw;
 }
   
 .dropdown:hover .dropbtn {
@@ -177,33 +177,17 @@ picture img {
     
 }
 
-/*drop1*/
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+}
+
 details {
     display: none; 
-}
 
-#drop1 {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-}
-
-#drop2 {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-}
-
-#drop3 {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-}
-
-details {
     padding: 0px 7vw;
     opacity: 0.9;
 
@@ -221,7 +205,7 @@ details p {
     font-size: 18px;
     letter-spacing: 1.5px;
 
-    border-bottom-left-radius: 2vw;
+    border-bottom-left-radius: 1vw;
 }
 
 details[open] summary span {
@@ -238,7 +222,7 @@ details summary span {
     align-items: center;
     
     background-color: saddlebrown;
-    border-bottom-left-radius: 2vw;
+    border-bottom-left-radius: 1vw;
 
     font-family: 'Lobster', sans-serif;
     font-size: 27px;
@@ -254,7 +238,7 @@ details summary span {
     margin-top: 10px;
     height: 35px;
     background-color: beige;
-    border-top-right-radius: 2vw;
+    border-top-right-radius: 1vw;
 
     border: 2px solid saddlebrown;
     color: saddlebrown
