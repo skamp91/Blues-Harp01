@@ -1,17 +1,44 @@
 html {
     height: 100.1%;
+    padding-bottom: 20px;
 }
 
 body {
     display: grid;
-    width: auto;
+    width: 100%;
     height: auto;
     
-    margin: 30px 30px 30px 30px;
-    padding: 20px;
-    border-top: 2px solid saddlebrown;
+    padding: 0px 0px 12px 0px;
+    margin: 0px;
+
     border-bottom: 2px solid saddlebrown;
 }
+
+#top {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    overflow: hidden;
+}
+#header_logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header_logo h1 {
+    font-family: 'Lobster', sans-serif;
+    font-size: 32px;
+    text-decoration: overline underline;
+    text-align: center;
+    padding-left: 35px;
+}
+#header_logo img {
+    width: 150px;
+    padding-left: 10px;
+
+    color: beige;
+}
+
 #background {
     position: fixed;
     top: 0;
@@ -25,53 +52,45 @@ body {
     z-index: -9999;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 20px;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-
-    font-family: 'Lobster', sans-serif;
-    font-size: 3.5vw;
-    text-decoration: underline;
-
-}
-
 picture {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 108px;
 }
 
 picture img {
-    width: 70vw;
+    width: 70%;
     border-radius: 50%;
     opacity: 0.9;
 }
 
 .dropdowns {
+    position: fixed;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 3fr repeat(3, 1fr);
     font-family: 'Raleway', sans-serif;
-    margin: 10px;
-    padding-bottom: 30px;
+    margin-bottom: 10px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background-color: saddlebrown;
 }
 
 .dropbtn {
     background-color: saddlebrown;
     color: black;
     padding: 16px;
-    font-size: 1.8vw;
+    font-size: 22px;
     font-family: 'Lobster', sans-serif;
     border: none;
-    border-radius: 4vw;
     opacity: 0.9;
     cursor: pointer;
+
+    border-top-right-radius: 4vw;  
 }
 .dropbtn:focus {
 	outline: none;
@@ -80,32 +99,38 @@ picture img {
 .dropdown {
     position: relative;
     display: grid;
-    margin: 2px;
+}
+.dropdown:first-child {
+    grid-column: 2 / 3;
 }
   
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #cd853f;
-    opacity: 0.9;
+    opacity: 0.95;
     z-index: 1;
   }
   
 .dropdown-content a {
     color: black;
-    font-size: 1.6vw;
+    font-size: 16px;
     padding: 12px 16px;
     text-decoration: none;
+    
     display: grid;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
   
 .dropdown-content a:hover {
     background-color:  #8b5a2b;
+    color: beige;
+    width: auto;
 }
 .dropdown-content a:hover.radius {
     border-bottom-left-radius: 4vw;
-    border-bottom-right-radius: 4vw;
 } 
 .dropdown:hover .dropdown-content {
     display: grid;
@@ -114,13 +139,13 @@ picture img {
     width: 100%;
 
     border-bottom-left-radius: 4vw;
-    border-bottom-right-radius: 4vw;
 }
   
 .dropdown:hover .dropbtn {
     color: beige;
     background-color: #cd853f;
     font-style: italic;
+    text-decoration: overline underline;
 
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -140,7 +165,7 @@ picture img {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    font-size: 20px; /* Increase font size */
     font-family: 'Raleway', sans-serif;
     font-style: italic;
 }
@@ -153,7 +178,7 @@ picture img {
 }
 
 /*drop1*/
-#aufbau, #ton, #stimm, #modelle ,#me{
+details {
     display: none; 
 }
 
@@ -161,13 +186,28 @@ picture img {
     display: grid;
     grid-template-columns: 1fr;
 
-    justify-content: center;
+    justify-items: center;
+}
+
+#drop2 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+}
+
+#drop3 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
 }
 
 details {
     padding: 0px 7vw;
     opacity: 0.9;
 
+    width: 70%;
 }
 
 details p {
@@ -178,29 +218,46 @@ details p {
     background-color: #cd853f;
 
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
     letter-spacing: 1.5px;
 
     border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
 }
 
-details[open] summary {
+details[open] summary span {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-summary {
+details summary {
+    display: grid;
+    grid-template-columns: auto 40px;
+}
+details summary span {
     display: flex;
     justify-content: center;
+    align-items: center;
     
     background-color: saddlebrown;
-    border-radius: 2vw;
+    border-bottom-left-radius: 2vw;
 
     font-family: 'Lobster', sans-serif;
-    font-size: 2vw;
+    font-size: 27px;
 
     margin-top: 10px;
-    padding: 10px;
+    height: 35px;
+    cursor: pointer; 
+}
+.x_button {
+    font-family: 'Railway', sans-serif;
+    font-size: 20px;
+
+    margin-top: 10px;
+    height: 35px;
+    background-color: beige;
+    border-top-right-radius: 2vw;
+
+    border: 2px solid saddlebrown;
+    color: saddlebrown
 }
 
 summary::-webkit-details-marker {
@@ -212,3 +269,33 @@ summary:focus {
 	outline: none;
 }
 
+@media (max-width: 1045px) {
+    picture {
+        margin-top: 144px;
+    }
+    .dropdown-content a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 840px) {
+    .dropdown:hover .dropdown-content {
+        width: auto;        
+    }
+}
+@media (max-width: 770px) {
+    picture {
+        margin-top: 100px;
+    }
+    #header_logo h1 {
+        display: none;
+    }
+    #header_logo img  {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 687px) {
+    picture {
+        margin-top: 130px;
+    }
+}
